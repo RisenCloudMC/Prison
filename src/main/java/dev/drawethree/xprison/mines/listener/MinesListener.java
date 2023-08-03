@@ -50,12 +50,15 @@ public class MinesListener {
 				.handler(e -> {
 					int pos = e.getAction() == Action.LEFT_CLICK_BLOCK ? 1 : e.getAction() == Action.RIGHT_CLICK_BLOCK ? 2 : -1;
 
+//					e.getPlayer().sendMessage("Position is clicked");
 					if (pos == -1) {
+//						e.getPlayer().sendMessage("Position is -1");
 						return;
 					}
 
 					e.setCancelled(true);
 
+//					e.getPlayer().sendMessage("Pizza's Note Selection was added!");
 					this.plugin.getManager().selectPosition(e.getPlayer(), pos, Position.of(e.getClickedBlock()));
 				}).bindWith(this.plugin.getCore());
 	}

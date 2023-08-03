@@ -41,7 +41,7 @@ import java.util.stream.Collectors;
 
 public class MineManager {
 
-	public static final ItemStack SELECTION_TOOL = ItemStackBuilder.of(Material.STICK).enchant(Enchantment.DURABILITY).name("&eMine Selection Tool").lore("&aRight-Click &fto set &aPosition 1 &7(MIN)", "&aLeft-Click &fto set &aPosition 2 &7(MAX)").build();
+	public static final ItemStack SELECTION_TOOL = ItemStackBuilder.of(Material.STICK).name("&eMine Selection Tool").lore("&aRight-Click &fto set &aPosition 1 &7(MIN)", "&aLeft-Click &fto set &aPosition 2 &7(MAX)").build();
 
 	private final MineLoader mineLoader;
 	private final MineSaver mineSaver;
@@ -135,6 +135,8 @@ public class MineManager {
 	}
 
 	public void selectPosition(Player player, int position, Position pos) {
+
+//		player.sendMessage("Selecting Position");
 
 		MineSelection selection;
 

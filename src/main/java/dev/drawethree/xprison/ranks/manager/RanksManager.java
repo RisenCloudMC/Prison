@@ -324,7 +324,6 @@ public class RanksManager {
 
         return ProgressBar.getProgressBar(this.plugin.getRanksConfig().getProgressBarLength(), this.plugin.getRanksConfig().getProgressBarDelimiter(), currentProgress, required);
     }
-
     public void runCommands(Rank rank, Player p) {
         if (rank.getCommandsToExecute() != null) {
 

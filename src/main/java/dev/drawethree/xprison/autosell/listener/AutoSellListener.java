@@ -35,7 +35,7 @@ public class AutoSellListener {
 				.handler(e -> Schedulers.sync().runLater(() -> {
 
 					if (this.plugin.getManager().hasAutoSellEnabled(e.getPlayer())) {
-						PlayerUtils.sendMessage(e.getPlayer(), this.plugin.getAutoSellConfig().getMessage("autosell_enable"));
+//						PlayerUtils.sendMessage(e.getPlayer(), this.plugin.getAutoSellConfig().getMessage("autosell_enable"));
 						return;
 					}
 

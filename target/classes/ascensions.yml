@@ -1,0 +1,70 @@
+messages:
+  no_permission: "&c&l(!) &fYou do not have a permission to do that!"
+  ascension_up: '&e&lPRESTIGE &8» &7Congratulations, you ascensiond up to &f%Ascension%'
+  not_enough_money_ascension: '&e&lPRESTIGE &8» &7You don''t have enough money to ascension. You need &a$%cost%.'
+  not_enough_tokens_ascension: '&e&lPRESTIGE &8» &7You don''t have enough money to ascension. You need %cost% Tokens.'
+  last_ascension: '&e&lPRESTIGE &8» &7You are at the last Ascension and have no more Ascensions.'
+  not_last_rank: '&e&lPRESTIGE &8» &7You must be last rank to ascension.'
+  top_updating: "&c&lLeaderboard is currently updating..."
+  ascension_set: "&e&lPRESTIGE &8» &7You have set %player%'s ascension to %amount%"
+  ascension_add: "&e&lPRESTIGE &8» &7You have added %amount% ascension to  %player%"
+  ascension_remove: "&e&lPRESTIGE &8» &7You have removed %amount% ascension from %player%"
+  max_ascension_started: "&e&lPRESTIGE &8» &7Started /maxascension. This might take a while..."
+  max_ascension_done: "&e&lPRESTIGE &8» &7Congratulations, you've max ascensiond from &cP%start_ascension% &7to &cP%ascension%&7."
+# Interval in minutes for saving player data into database
+player_data_save_interval: 10
+# Should we use tokens as a currency for ascensions ?
+use_tokens_currency: false
+# Should we reset player rank after he ascensions ?
+reset_rank_after_ascension: false
+# Amount of players displayed in top lists
+top_players_amount: 10
+ascension-top-format:
+  - "&e&m-------&f&m-------&e&m--------&f&m--------&e&m--------&f&m-------&e&m-------"
+  - "&e&lASCENSION TOP"
+  - "{FOR_EACH_PLAYER} &f&l#%position%. &e%player% &8» &7%ascension% Ascension"
+  - "&e&m-------&f&m-------&e&m--------&f&m--------&e&m--------&f&m-------&e&m-------"
+# Infinite ascensions settings
+unlimited_ascensions:
+  # Should we enable infinite ascensions ?
+  enabled: false
+  # Top limit of ascension
+  max_ascension: 1000000
+  # Initial cost of ascension
+  ascension_cost: 1000000
+  # Increasing cost of ascension
+  increase_cost:
+    enabled: true
+    increase_cost_by: 1.25
+  # Ascension prefix
+  prefix: '&2&lP%ascension%'
+  # Rewarding players after each ascension
+  rewards-per-ascension:
+    enabled: false
+    # Commands to be exectured
+    rewards:
+      - 'eco give %player% 1'
+  # Rewarding players on different ascensions
+  rewards:
+    10:
+      - 'eco give %player% 10'
+    100:
+      - 'eco give %player% 100'
+    1000:
+      - 'eco give %player% 1000'
+    10000:
+      - 'eco give %player% 10000'
+# Manual ascension settings
+Ascension:
+  '0':
+    # Ascension prefix
+    Prefix: '&f&lP0'
+  '1':
+    # Ascension prefix
+    Prefix: '&2&lP1'
+    # Ascension cost
+    Cost: 30000000000
+    # Commands to run when player reaches this ascension
+    CMD:
+      - tokens give 25000 %player%
+      - broadcast &a&l*&2&l*&a&l* &f%player%&7 has just ascended to &8[%Ascension%&8] &a&l*&2&l*&a&l*
