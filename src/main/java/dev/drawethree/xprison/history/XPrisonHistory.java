@@ -20,6 +20,7 @@ import dev.drawethree.xprison.history.service.HistoryService;
 import dev.drawethree.xprison.history.service.impl.HistoryServiceImpl;
 import dev.drawethree.xprison.multipliers.api.events.PlayerMultiplierReceiveEvent;
 import dev.drawethree.xprison.prestiges.api.events.PlayerPrestigeEvent;
+import dev.drawethree.xprison.ascensions.api.events.PlayerAscensionEvent;
 import dev.drawethree.xprison.ranks.api.events.PlayerRankUpEvent;
 import dev.drawethree.xprison.tokens.api.events.PlayerTokensLostEvent;
 import dev.drawethree.xprison.tokens.api.events.PlayerTokensReceiveEvent;
@@ -99,6 +100,13 @@ public final class XPrisonHistory implements XPrisonModule {
 				.handler(e -> {
 					this.historyManager.createPlayerHistoryLine(e.getPlayer(), this.core.getPrestiges(), String.format("Prestige Up:  %s&r -> %s", e.getOldPrestige().getPrefix(), e.getNewPrestige().getPrefix()));
 				}).bindWith(this.core);
+
+		Events.subscribe(PlayerAscensionEvent.class, EventPriority.MONITOR)
+				.filter(EventFilters.ignoreCancelled())
+				.handler(e -> {
+					this.historyManager.createPlayerHistoryLine(e.getPlayer(), this.core.getAscensions(), String.format("Ascension Up:  %s&r -> %s", e.getOldAscension().getPrefix(), e.getNewAscension().getPrefix()));
+				}).bindWith(this.core);
+
 		Events.subscribe(GangLeaveEvent.class, EventPriority.MONITOR)
 				.filter(EventFilters.ignoreCancelled())
 				.handler(e -> {

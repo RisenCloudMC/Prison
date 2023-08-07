@@ -1,3 +1,4 @@
+dev\drawethree\xprison\ascensions\api\XPrisonAscensionsAPIImpl.class
 dev\drawethree\xprison\autominer\utils\AutoMinerConstants.class
 dev\drawethree\xprison\mines\XPrisonMines.class
 dev\drawethree\xprison\gems\service\impl\GemsServiceImpl.class
@@ -13,6 +14,7 @@ dev\drawethree\xprison\multipliers\api\XPrisonMultipliersAPIImpl$1.class
 dev\drawethree\xprison\gems\api\XPrisonGemsAPI.class
 dev\drawethree\xprison\autosell\utils\SellPriceComparator.class
 dev\drawethree\xprison\autosell\listener\AutoSellListener.class
+dev\drawethree\xprison\ascensions\api\XPrisonAscensionsAPI.class
 dev\drawethree\xprison\ranks\commands\MaxRankupCommand.class
 dev\drawethree\xprison\utils\compat\MinecraftVersion.class
 dev\drawethree\xprison\ranks\XPrisonRanks.class
@@ -76,6 +78,7 @@ dev\drawethree\xprison\mines\api\XPrisonMinesAPIImpl.class
 dev\drawethree\xprison\gangs\utils\GangsConstants.class
 dev\drawethree\xprison\mainmenu\help\MinesHelpGui.class
 dev\drawethree\xprison\utils\Constants.class
+dev\drawethree\xprison\ascensions\commands\AscensionCommand.class
 dev\drawethree\xprison\history\service\impl\HistoryServiceImpl.class
 dev\drawethree\xprison\mainmenu\help\TokensHelpGui.class
 dev\drawethree\xprison\ranks\commands\RankupCommand.class
@@ -94,6 +97,7 @@ dev\drawethree\xprison\enchants\model\impl\KeyallsEnchant.class
 dev\drawethree\xprison\gangs\commands\impl\admin\GangAdminDisbandSubCommand.class
 dev\drawethree\xprison\tokens\utils\TokensConstants.class
 dev\drawethree\xprison\utils\gui\ConfirmationGui.class
+dev\drawethree\xprison\ascensions\service\impl\AscensionServiceImpl.class
 dev\drawethree\xprison\mines\migration\model\impl\MineResetLiteMigration.class
 dev\drawethree\xprison\autominer\api\XPrisonAutoMinerAPIImpl.class
 dev\drawethree\xprison\gangs\api\XPrisonGangsAPIImpl.class
@@ -114,12 +118,14 @@ dev\drawethree\xprison\autominer\utils\AutoMinerUtils.class
 dev\drawethree\xprison\prestiges\task\SavePlayerDataTask.class
 dev\drawethree\xprison\utils\misc\MapUtil.class
 dev\drawethree\xprison\mainmenu\help\RanksHelpGui.class
+dev\drawethree\xprison\ascensions\task\SavePlayerDataTask.class
 dev\drawethree\xprison\history\api\XPrisonHistoryAPI.class
 dev\drawethree\xprison\tokens\api\XPrisonTokensAPIImpl.class
 dev\drawethree\xprison\utils\text\TextUtils.class
 dev\drawethree\xprison\autominer\repo\impl\AutominerRepositoryImpl.class
 dev\drawethree\xprison\tokens\listener\TokensListener.class
 dev\drawethree\xprison\mines\commands\impl\MineSetTpCommand.class
+dev\drawethree\xprison\ascensions\listener\AscensionListener.class
 dev\drawethree\xprison\utils\misc\RegionUtils.class
 dev\drawethree\xprison\gangs\enums\GangNameCheckResult.class
 dev\drawethree\xprison\autominer\service\impl\AutominerServiceImpl.class
@@ -131,6 +137,7 @@ dev\drawethree\xprison\autosell\api\XPrisonAutoSellAPI.class
 dev\drawethree\xprison\enchants\gui\DisenchantGUI.class
 dev\drawethree\xprison\enchants\model\XPrisonEnchantment.class
 dev\drawethree\xprison\enchants\command\GiveFirstJoinPickaxeCommand.class
+dev\drawethree\xprison\ascensions\repo\AscensionRepository.class
 dev\drawethree\xprison\database\model\DatabaseCredentials.class
 dev\drawethree\xprison\database\PooledSQLDatabase.class
 dev\drawethree\xprison\enchants\model\impl\ExplosiveEnchant.class
@@ -157,12 +164,14 @@ dev\drawethree\xprison\gangs\commands\impl\admin\GangAdminKickSubCommand.class
 dev\drawethree\xprison\utils\misc\MaterialUtils$1.class
 dev\drawethree\xprison\gangs\commands\impl\GangAcceptSubCommand.class
 dev\drawethree\xprison\utils\location\LocationUtils.class
+dev\drawethree\xprison\ascensions\commands\AscensionAdminCommand.class
 dev\drawethree\xprison\mines\commands\impl\MineAddBlockCommand.class
 dev\drawethree\xprison\gangs\XPrisonGangs.class
 dev\drawethree\xprison\mainmenu\help\AutoSellHelpGui.class
 dev\drawethree\xprison\XPrisonModule.class
 dev\drawethree\xprison\tokens\managers\CommandManager.class
 dev\drawethree\xprison\mines\migration\gui\AllMinesMigrationGui.class
+dev\drawethree\xprison\ascensions\XPrisonAscensions.class
 dev\drawethree\xprison\mines\api\events\MineDeleteEvent.class
 dev\drawethree\xprison\tokens\commands\TokensHelpCommand.class
 dev\drawethree\xprison\gangs\service\GangsService.class
@@ -175,6 +184,7 @@ dev\drawethree\xprison\gangs\api\events\GangDisbandEvent.class
 dev\drawethree\xprison\placeholders\XPrisonPAPIPlaceholder.class
 dev\drawethree\xprison\tokens\service\impl\TokensServiceImpl.class
 dev\drawethree\xprison\gems\commands\GemsWithdrawCommand.class
+dev\drawethree\xprison\ascensions\repo\impl\AscensionRepositoryImpl.class
 dev\drawethree\xprison\mines\model\mine\loader\MineLoader.class
 dev\drawethree\xprison\autosell\gui\AllSellRegionsGui.class
 dev\drawethree\xprison\gangs\commands\impl\GangDisbandSubCommand.class
@@ -221,6 +231,7 @@ dev\drawethree\xprison\prestiges\commands\MaxPrestigeCommand.class
 dev\drawethree\xprison\multipliers\multiplier\PlayerMultiplier.class
 dev\drawethree\xprison\multipliers\service\impl\MultipliersServiceImpl.class
 dev\drawethree\xprison\utils\block\SpheroidExplosionBlockProvider.class
+dev\drawethree\xprison\ascensions\api\events\PlayerAscensionEvent.class
 dev\drawethree\xprison\mines\gui\MineResetOptionsGUI.class
 dev\drawethree\xprison\multipliers\enums\MultiplierType.class
 dev\drawethree\xprison\enchants\model\impl\FortuneEnchant.class
@@ -237,6 +248,7 @@ dev\drawethree\xprison\autominer\api\XPrisonAutoMinerAPI.class
 dev\drawethree\xprison\autominer\manager\AutoMinerManager.class
 dev\drawethree\xprison\enchants\model\impl\FlyEnchant.class
 dev\drawethree\xprison\enchants\api\XPrisonEnchantsAPIImpl.class
+dev\drawethree\xprison\ascensions\manager\AscensionManager.class
 dev\drawethree\xprison\prestiges\api\events\PlayerPrestigeEvent.class
 dev\drawethree\xprison\tokens\api\events\PlayerTokensReceiveEvent.class
 dev\drawethree\xprison\gangs\commands\impl\GangKickSubCommand.class
@@ -259,6 +271,7 @@ dev\drawethree\xprison\gangs\commands\impl\GangTopSubCommand.class
 dev\drawethree\xprison\pickaxelevels\api\XPrisonPickaxeLevelsAPIImpl.class
 dev\drawethree\xprison\gems\api\events\PlayerGemsLostEvent.class
 dev\drawethree\xprison\mines\commands\impl\MineDeleteCommand.class
+dev\drawethree\xprison\ascensions\commands\MaxAscensionCommand.class
 dev\drawethree\xprison\gangs\managers\GangsManager.class
 dev\drawethree\xprison\gangs\model\GangTopProvider.class
 dev\drawethree\xprison\enchants\api\events\LayerTriggerEvent.class
@@ -284,10 +297,12 @@ dev\drawethree\xprison\gangs\model\GangInvitation.class
 dev\drawethree\xprison\multipliers\api\XPrisonMultipliersAPI.class
 dev\drawethree\xprison\utils\block\CuboidExplosionBlockProvider.class
 dev\drawethree\xprison\mainmenu\help\HelpGui.class
+dev\drawethree\xprison\ascensions\config\AscensionConfig.class
 dev\drawethree\xprison\mines\commands\impl\MineHelpCommand.class
 dev\drawethree\xprison\enchants\model\impl\EfficiencyEnchant.class
 dev\drawethree\xprison\enchants\model\impl\GemFinderEnchant.class
 dev\drawethree\xprison\gangs\service\impl\GangsServiceImpl.class
+dev\drawethree\xprison\ascensions\commands\AscensionTopCommand.class
 dev\drawethree\xprison\nicknames\repo\NicknameRepository.class
 dev\drawethree\xprison\autosell\api\XPrisonAutoSellAPIImpl.class
 dev\drawethree\xprison\autosell\command\SellPriceCommand.class
@@ -345,10 +360,12 @@ dev\drawethree\xprison\multipliers\service\MultipliersService.class
 dev\drawethree\xprison\mines\gui\MineEffectsGUI.class
 dev\drawethree\xprison\history\manager\HistoryManager.class
 dev\drawethree\xprison\ranks\service\RanksService.class
+dev\drawethree\xprison\ascensions\service\AscensionService.class
 dev\drawethree\xprison\mines\gui\MineBlocksGUI.class
 dev\drawethree\xprison\mainmenu\MainMenu.class
 dev\drawethree\xprison\enchants\managers\RespawnManager.class
 dev\drawethree\xprison\pickaxelevels\api\XPrisonPickaxeLevelsAPI.class
+dev\drawethree\xprison\ascensions\model\Ascension.class
 dev\drawethree\xprison\autosell\manager\AutoSellManager.class
 dev\drawethree\xprison\enchants\command\ValueCommand.class
 dev\drawethree\xprison\gangs\commands\impl\admin\GangAdminSubCommand.class

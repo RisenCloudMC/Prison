@@ -197,6 +197,10 @@ public final class XPrisonPAPIPlaceholder extends PlaceholderExpansion {
 				return plugin.getPrestiges().getApi().getPlayerPrestige(player).getPrefix();
 			case "prestige_id":
 				return String.valueOf(plugin.getPrestiges().getApi().getPlayerPrestige(player).getId());
+			case "ascension":
+				return plugin.getAscensions().getApi().getPlayerAscension(player).getPrefix();
+			case "ascension_id":
+				return String.valueOf(plugin.getAscensions().getApi().getPlayerAscension(player).getId());
 			case "autominer_time": {
 				int autominerTime = plugin.getAutoMiner().getManager().getAutoMinerTime(player);
 				return AutoMinerUtils.getAutoMinerTimeLeftFormatted(autominerTime);

@@ -27,6 +27,7 @@ modules:
   gems: true
   ranks: true
   prestiges: true
+  ascensions: true
   multipliers: true
   enchants: true
   autosell: true

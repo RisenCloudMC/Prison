@@ -2,12 +2,14 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\commands\i
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\gui\MineResetOptionsGUI.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mainmenu\help\HelpGui.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mainmenu\help\HistoryHelpGui.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\task\SavePlayerDataTask.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\repo\EnchantsRepository.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\autominer\config\AutoMinerConfig.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\prestiges\service\PrestigeService.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\model\GangUpdateTopTask.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\commands\impl\MineTeleportCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\managers\EnchantsManager.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\api\events\PlayerAscensionEvent.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\autominer\model\AutoMinerRegion.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\model\mine\HologramType.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\utils\compat\MinecraftVersion.java
@@ -18,6 +20,7 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\database\model\S
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\model\impl\FortuneEnchant.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ranks\api\XPrisonRanksAPI.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\commands\impl\MineRenameCommand.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\listener\AscensionListener.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\gui\DisenchantGUI.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\enums\GangCreateResult.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\autosell\utils\AutoSellContants.java
@@ -33,6 +36,7 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\autominer\repo\i
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gems\service\impl\GemsServiceImpl.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gems\commands\GemsSetCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\utils\player\PlayerUtils.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\service\impl\AscensionServiceImpl.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\prestiges\service\impl\PrestigeServiceImpl.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\model\impl\ExplosiveEnchant.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\autominer\utils\AutoMinerConstants.java
@@ -44,6 +48,7 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\enums\Gang
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\model\mine\saver\MineFileSaver.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mainmenu\MainMenu.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ranks\repo\RanksRepository.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\api\XPrisonAscensionsAPIImpl.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\prestiges\repo\impl\PrestigeRepositoryImpl.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\history\gui\confirmation\PlayerClearHistoryConfirmationGUI.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\multipliers\service\impl\MultipliersServiceImpl.java
@@ -87,6 +92,7 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\tokens\api\event
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gems\api\XPrisonGemsAPI.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mainmenu\help\RanksHelpGui.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\gui\MineEditTimedResetGUI.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\repo\AscensionRepository.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\database\model\DatabaseCredentials.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\model\GangInvitation.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\multipliers\api\XPrisonMultipliersAPIImpl.java
@@ -104,6 +110,7 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\commands\i
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\api\events\GangDisbandEvent.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gems\service\GemsService.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\migration\model\impl\MineResetLiteMigration.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\model\Ascension.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\autominer\api\events\PlayerAutomineEvent.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\pickaxelevels\config\PickaxeLevelsConfig.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\prestiges\listener\PrestigeListener.java
@@ -159,6 +166,7 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\listene
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\autominer\model\AutoMinerTask.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\database\model\ConnectionProperties.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\prestiges\config\PrestigeConfig.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\XPrisonAscensions.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gems\repo\impl\GemsRepositoryImpl.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\history\api\XPrisonHistoryAPI.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\utils\GuiUtils.java
@@ -176,9 +184,12 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\model\mine
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\utils\gui\ClearDBGui.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\model\impl\NukeEnchant.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\config\EnchantsConfig.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\repo\impl\AscensionRepositoryImpl.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mainmenu\help\MultipliersHelpGui.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\tokens\model\BlockReward.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\commands\AscensionAdminCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\prestiges\commands\PrestigeTopCommand.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\commands\MaxAscensionCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\api\XPrisonMinesAPI.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\commands\impl\admin\GangAdminKickSubCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\utils\compat\CompMaterial.java
@@ -212,7 +223,9 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\tokens\repo\Bloc
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\api\enums\LostCause.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\multipliers\enums\MultiplierType.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\prestiges\api\XPrisonPrestigesAPI.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\commands\AscensionCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\tokens\commands\TokensCommand.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\service\AscensionService.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\commands\GangCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\commands\impl\GangChatSubCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\autosell\api\events\XPrisonAutoSellEvent.java
@@ -268,6 +281,7 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\prestiges\task\S
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\tokens\api\XPrisonTokensAPIImpl.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\model\impl\CharityEnchant.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\mines\model\mine\loader\MineLoader.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\manager\AscensionManager.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gems\commands\GemsPayCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ranks\commands\SetRankCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\XPrison.java
@@ -279,6 +293,7 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\history\gui\Play
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\autosell\listener\AutoSellListener.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\multipliers\api\events\PlayerMultiplierReceiveEvent.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\utils\Constants.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\api\XPrisonAscensionsAPI.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\api\events\XPrisonPlayerEnchantEvent.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\nicknames\repo\NicknameRepository.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\utils\misc\MapUtil.java
@@ -330,6 +345,8 @@ A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\prestiges\api\ev
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\tokens\config\BlockRewardsConfig.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\utils\text\TextUtils.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\enchants\command\ValueCommand.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\config\AscensionConfig.java
+A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\ascensions\commands\AscensionTopCommand.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\gui\panel\DisbandGangGUI.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\gangs\gui\panel\ManageGangMembersGui.java
 A:\RisenCloud Stuff\Prison\src\main\java\dev\drawethree\xprison\history\gui\PlayerHistoryGUI.java

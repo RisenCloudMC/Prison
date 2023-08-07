@@ -4,6 +4,9 @@ import dev.drawethree.xprison.api.enums.LostCause;
 import dev.drawethree.xprison.prestiges.XPrisonPrestiges;
 import dev.drawethree.xprison.prestiges.manager.PrestigeManager;
 import dev.drawethree.xprison.prestiges.model.Prestige;
+import dev.drawethree.xprison.ascensions.XPrisonAscensions;
+import dev.drawethree.xprison.ascensions.manager.AscensionManager;
+import dev.drawethree.xprison.ascensions.model.Ascension;
 import dev.drawethree.xprison.ranks.XPrisonRanks;
 import dev.drawethree.xprison.ranks.api.events.PlayerRankUpEvent;
 import dev.drawethree.xprison.ranks.model.Rank;
@@ -235,6 +238,9 @@ public class RanksManager {
     public int getRankupProgress(Player player) {
 
         if (this.isMaxRank(player)) {
+            if (areAscensionsEnabled()) {
+                return getAscensionManager().getAscensionProgress(player);
+            }
             if (arePrestigesEnabled()) {
                 return getPrestigeManager().getPrestigeProgress(player);
             }
@@ -264,6 +270,19 @@ public class RanksManager {
 
     public double getNextRankCost(Player player) {
         if (this.isMaxRank(player)) {
+            if(areAscensionsEnabled()) {
+                if(getAscensionManager().isMaxAscension(player)) {
+                    return 0.0;
+                } else {
+                    Ascension ascension = getAscensionManager().getPlayerAscension(player);
+                    Ascension next = getAscensionManager().getNextAscension(ascension);
+                    if (next != null) {
+                        return next.getCost();
+                    } else {
+                        return 0.0;
+                    }
+                }
+            }
             if (arePrestigesEnabled()) {
                 if (getPrestigeManager().isMaxPrestige(player)) {
                     return 0.0;
@@ -301,11 +320,25 @@ public class RanksManager {
         return this.plugin.getCore().getPrestiges().getPrestigeManager();
     }
 
+    private boolean areAscensionsEnabled() {
+        return this.plugin.getCore().isModuleEnabled(XPrisonAscensions.MODULE_NAME);
+    }
+
+    private AscensionManager getAscensionManager() {
+        if (!areAscensionsEnabled()) {
+            throw new IllegalStateException("Ascensions module is not enabled");
+        }
+        return this.plugin.getCore().getAscensions().getAscensionManager();
+    }
+
     public String getRankupProgressBar(Player player) {
 
         double currentProgress = 0, required = 100;
         if (this.isMaxRank(player)) {
             currentProgress = 100;
+            if(areAscensionsEnabled()) {
+                currentProgress = getAscensionManager().getAscensionProgress(player);
+            }
             if (arePrestigesEnabled()) {
                 currentProgress = getPrestigeManager().getPrestigeProgress(player);
             }

@@ -95,6 +95,11 @@ public class ResetSelectionGui extends Gui {
 				new ResetModulePlayerDataConfirmationGui(this.getPlayer(), this.core.getPrestiges()).open();
 			}));
 
+			//Ascensions
+			this.setItem(30, ItemStackBuilder.of(SkullUtils.DIAMOND_R_SKULL.clone()).name("&e&lAscensions").lore("&7Click to reset this module", "&7player data.").build(() -> {
+				new ResetModulePlayerDataConfirmationGui(this.getPlayer(), this.core.getAscensions()).open();
+			}));
+
 			//PickaxeLevels
 			this.setItem(21, ItemStackBuilder.of(CompMaterial.EXPERIENCE_BOTTLE.toItem()).name("&e&lPickaxe Levels").lore("&7Click to reset this module", "&7player data.").build(() -> {
 				new ResetModulePlayerDataConfirmationGui(this.getPlayer(), this.core.getPickaxeLevels()).open();

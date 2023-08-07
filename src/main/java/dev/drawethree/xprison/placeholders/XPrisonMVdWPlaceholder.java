@@ -2,6 +2,7 @@ package dev.drawethree.xprison.placeholders;
 
 import be.maximvdw.placeholderapi.PlaceholderAPI;
 import dev.drawethree.xprison.XPrison;
+import dev.drawethree.xprison.ascensions.XPrisonAscensions;
 import dev.drawethree.xprison.autominer.utils.AutoMinerUtils;
 import dev.drawethree.xprison.autosell.XPrisonAutoSell;
 import dev.drawethree.xprison.enchants.XPrisonEnchants;
@@ -41,6 +42,7 @@ public class XPrisonMVdWPlaceholder {
 		this.registerMultipliersPlaceholders();
 		this.registerRanksPlaceholders();
 		this.registerPrestigesPlaceholders();
+		this.registerAscensionsPlaceholders();
 		this.registerPickaxeLevelsPlaceholders();
 		this.registerAutoSellPlaceholders();
 		this.registerMinesPlaceholders();
@@ -50,6 +52,14 @@ public class XPrisonMVdWPlaceholder {
 		if (!this.plugin.isModuleEnabled(XPrisonEnchants.MODULE_NAME)) {
 			return;
 		}
+	}
+
+	private void registerAscensionsPlaceholders() {
+		if (!this.plugin.isModuleEnabled(XPrisonAscensions.MODULE_NAME)) {
+			return;
+		}
+		PlaceholderAPI.registerPlaceholder(plugin, "xprison_ascension", event -> plugin.getAscensions().getApi().getPlayerAscension(event.getPlayer()).getPrefix());
+		PlaceholderAPI.registerPlaceholder(plugin, "xprison_ascension_id", event -> String.valueOf(plugin.getAscensions().getApi().getPlayerAscension(event.getPlayer()).getId()));
 	}
 
 	private void registerPrestigesPlaceholders() {

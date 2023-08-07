@@ -8,6 +8,7 @@ import dev.drawethree.xprison.utils.inventory.InventoryUtils;
 import me.lucko.helper.Events;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventPriority;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryAction;
@@ -81,6 +82,7 @@ public class EnchantsListener {
 				.filter(e -> e.getItem() != null && this.plugin.getCore().isPickaxeSupported(e.getItem().getType()))
 				.filter(e -> (this.plugin.getEnchantsConfig().getOpenEnchantMenuActions().contains(e.getAction())))
 				.handler(e -> {
+					if(!e.getPlayer().isSneaking()) return;
 
 					e.setCancelled(true);
 
@@ -90,7 +92,22 @@ public class EnchantsListener {
 
 					new EnchantGUI(this.plugin, e.getPlayer(), pickAxe, pickaxeSlot).open();
 				}).bindWith(this.plugin.getCore());
+
+		Events.subscribe(PlayerInteractEvent.class)
+				.filter(e -> e.getItem() != null && this.plugin.getCore().isPickaxeSupported(e.getItem().getType()))
+				.filter(e -> e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK)
+				.filter(e -> e.getPlayer().isSneaking())
+				.handler(e -> {
+
+
+
+				}).bindWith(this.plugin.getCore());
+
 	}
+
+
+
+
 
 	private void subscribeToPlayerDropItemEvent() {
 		// Dropping pickaxe

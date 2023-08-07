@@ -1,6 +1,7 @@
 package dev.drawethree.xprison;
 
 import com.github.lalyos.jfiglet.FigletFont;
+import dev.drawethree.xprison.ascensions.XPrisonAscensions;
 import dev.drawethree.xprison.autominer.XPrisonAutoMiner;
 import dev.drawethree.xprison.autosell.XPrisonAutoSell;
 import dev.drawethree.xprison.config.FileManager;
@@ -66,6 +67,7 @@ public final class XPrison extends ExtendedJavaPlugin {
 	private XPrisonGems gems;
 	private XPrisonRanks ranks;
 	private XPrisonPrestiges prestiges;
+	private XPrisonAscensions ascensions;
 	private XPrisonMultipliers multipliers;
 	private XPrisonEnchants enchants;
 	private XPrisonAutoSell autoSell;
@@ -169,6 +171,10 @@ public final class XPrison extends ExtendedJavaPlugin {
 			this.loadModule(prestiges);
 		}
 
+		if (this.getConfig().getBoolean("modules.ascensions")) {
+			this.loadModule(ascensions);
+		}
+
 		if (this.getConfig().getBoolean("modules.multipliers")) {
 			this.loadModule(multipliers);
 		}
@@ -238,6 +244,7 @@ public final class XPrison extends ExtendedJavaPlugin {
 		this.gems = new XPrisonGems(this);
 		this.ranks = new XPrisonRanks(this);
 		this.prestiges = new XPrisonPrestiges(this);
+		this.ascensions = new XPrisonAscensions(this);
 		this.multipliers = new XPrisonMultipliers(this);
 		this.enchants = new XPrisonEnchants(this);
 		this.autoSell = new XPrisonAutoSell(this);
@@ -251,6 +258,7 @@ public final class XPrison extends ExtendedJavaPlugin {
 		this.modules.put(this.gems.getName().toLowerCase(), this.gems);
 		this.modules.put(this.ranks.getName().toLowerCase(), this.ranks);
 		this.modules.put(this.prestiges.getName().toLowerCase(), this.prestiges);
+		this.modules.put(this.ascensions.getName().toLowerCase(), this.ascensions);
 		this.modules.put(this.multipliers.getName().toLowerCase(), this.multipliers);
 		this.modules.put(this.enchants.getName().toLowerCase(), this.enchants);
 		this.modules.put(this.autoSell.getName().toLowerCase(), this.autoSell);

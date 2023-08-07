@@ -1,6 +1,7 @@
 package dev.drawethree.xprison.history.manager;
 
 import dev.drawethree.xprison.XPrisonModule;
+import dev.drawethree.xprison.ascensions.XPrisonAscensions;
 import dev.drawethree.xprison.autominer.XPrisonAutoMiner;
 import dev.drawethree.xprison.gangs.XPrisonGangs;
 import dev.drawethree.xprison.gems.XPrisonGems;
@@ -112,6 +113,9 @@ public class HistoryManager {
 			case XPrisonPrestiges
 					.MODULE_NAME:
 				return SkullUtils.DIAMOND_P_SKULL.clone();
+			case XPrisonAscensions
+					.MODULE_NAME:
+				return SkullUtils.DIAMOND_R_SKULL.clone();
 			case XPrisonRanks
 					.MODULE_NAME:
 				return SkullUtils.DIAMOND_R_SKULL.clone();
